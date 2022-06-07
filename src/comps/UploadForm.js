@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 const UploadForm = () => {
 
@@ -14,7 +14,7 @@ const UploadForm = () => {
     const changeHandler = (e) => {
         let selected = e.target.files[0];
 
-        if (selected && types.includes(selected.type)){
+        if (selected && types.includes(selected.type)) {
             setFile(selected);
         } else {
             setFile(null);
@@ -24,9 +24,9 @@ const UploadForm = () => {
 
   return (
       <form action="">
-          <input type="file" onClick={changeHandler}/>
+          <input type="file" onChange={changeHandler} />
           <div className="output">
-              { error && <div className='error'> {error} </div>}
+              { error && <div className='error'>{ error }</div> }
           </div>
       </form>
   )
