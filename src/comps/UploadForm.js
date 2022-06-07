@@ -16,6 +16,7 @@ const UploadForm = () => {
 
         if (selected && types.includes(selected.type)) {
             setFile(selected);
+            setError('');
         } else {
             setFile(null);
             setError('set the right type of file');
