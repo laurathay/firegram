@@ -1,4 +1,4 @@
-import * as firebase from 'firebase/app';
+import * as firebase from 'firebase/compact/app';
 //store images
 import 'firebase/storage';
 // db
