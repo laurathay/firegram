@@ -4,13 +4,8 @@ import 'firebase/storage';
 // db
 import 'firebase/firestore';
 
-// Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-app.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
   // Your web app's Firebase configuration
-  const firebaseConfig = {
+  var firebaseConfig = {
     apiKey: "AIzaSyBkuI3Hn92-Gijfz85stm2My6LwshrhX0g",
     authDomain: "lthay-blog.firebaseapp.com",
     projectId: "lthay-blog",
@@ -24,5 +19,7 @@ import 'firebase/firestore';
 
 const projectStorage = firebase.storage();
 const projectFirestore = firebase.firestore();
+const timestamp = firebase.firestore.FieldValue.serverTimestamp;
 
-export { projectStorage, projectFirestore };
+
+export { projectStorage, projectFirestore, timestamp };
