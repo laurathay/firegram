@@ -1,4 +1,4 @@
-import * as firebase from 'firebase/compact/app';
+import * as firebase from 'firebase/app';
 //store images
 import 'firebase/storage';
 // db
@@ -14,8 +14,8 @@ import 'firebase/firestore';
     appId: "1:197719640990:web:b8e9038bffe8cdbdfd648f"
   };
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
 const projectStorage = firebase.storage();
 const projectFirestore = firebase.firestore();

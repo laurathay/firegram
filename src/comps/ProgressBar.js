@@ -3,7 +3,7 @@ import useStorage from '../hooks/useStorage';
 
 const ProgressBar = ({ file, setFile }) => {
 
-    const [ url, progress ] =  useStorage(file);
+    const { url, progress } =  useStorage(file);
 
     //to make the progress bar disappear after its downloaded
     useEffect(() => {
@@ -14,7 +14,7 @@ const ProgressBar = ({ file, setFile }) => {
  
     return (
     <div className='progress-bar' style={{ width: progress + '%' }}></div>
-    )
+    );
 }
 
 export default ProgressBar;

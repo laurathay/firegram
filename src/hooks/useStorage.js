@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { projecStorage, projectFirestore, timestamp } from '../firebase/config';
+import { useEffect, useState } from 'react';
+import { projectStorage, projectFirestore, timestamp } from '../firebase/config';
 
 const useStorage = (file) => {
 
@@ -10,7 +10,7 @@ const useStorage = (file) => {
 
     useEffect(() => {
         //references
-        const storageRef = projecStorage.ref(file.name);
+        const storageRef = projectStorage.ref(file.name);
         //where we put our pictures in the db after its downloaded in firebase with method collection
         const collectionRef = projectFirestore.collection('images');
 
@@ -24,8 +24,8 @@ const useStorage = (file) => {
             const createdAt = timestamp();
             await collectionRef.add({ url, createdAt });
             setUrl(url);
-        })
-    }, [file])
+        });
+    }, [file]);
 
     return { progress, url, error }
 }
