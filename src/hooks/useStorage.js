@@ -11,6 +11,7 @@ const useStorage = (file) => {
     useEffect(() => {
         //references
         const storageRef = projecStorage.ref(file.name);
+        //where we put our pictures in the db after its downloaded in firebase with method collection
         const collectionRef = projectFirestore.collection('images');
 
         storageRef.put(file).on('state_changed', (snap) => {
