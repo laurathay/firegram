@@ -1,6 +1,9 @@
-import * as firebase from 'firebase/app';
+// import firebase from 'firebase/app'
+import { initializeApp } from "firebase/app";
+
+import  { firebase } from 'firebase/app';
 //store images
-import 'firebase/storage';
+import { getStorage } from 'firebase/storage';
 // db
 import 'firebase/firestore';
 
