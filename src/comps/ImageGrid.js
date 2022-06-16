@@ -8,7 +8,9 @@ const ImageGrid = () => {
     return (
         <div className="img-grid">
             { docs && docs.map(doc => (
-                <div className="img-wrap" key={doc.id}>
+                <div className="img-wrap" key={doc.id}
+                    onClick={ () => seSelectedImg(doc.url)}
+                >
                     <img src={doc.url} alt="upload pic" />
                 </div>
             ))}
