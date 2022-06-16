@@ -9,6 +9,7 @@ function App() {
       <Title/>
       <UploadForm />
       <ProgressBar />
+      <ImageGrid />
     </div>
   );
 }
