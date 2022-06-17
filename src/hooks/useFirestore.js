@@ -8,7 +8,7 @@ const useFireStore = (collection) => {
         const unsub = projectFirestore.collection(collection)
             .orderBy('createdAt', 'desc')
             //everytime an image is added it is notified by the snapshot
-            .onSnapshot((snap) => {
+            .onSnapshot(snap => {
                 //create an array of document that will return 
                 let documents = [];
                 // push the datas of the documents into the document 

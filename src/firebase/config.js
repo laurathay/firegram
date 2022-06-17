@@ -1,11 +1,10 @@
-// import firebase from 'firebase/app'
-import { initializeApp } from "firebase/app";
+import * as firebase from 'firebase/app'
 
-import  { firebase } from 'firebase/app';
 //store images
-import { getStorage } from 'firebase/storage';
+import 'firebase/storage';
 // db
 import 'firebase/firestore';
+import { FirebaseError } from 'firebase/app';
 
   // Your web app's Firebase configuration
   var firebaseConfig = {
